@@ -8,7 +8,7 @@ Bossmin is an easy to use Admin-Theme for Bootstrap 3
 
 ## License
 
-Licensed under [MIT](). Totally free for private or commercial projects.
+Licensed under [MIT](https://github.com/WebJedi-DE/bossmin/blob/master/LICENSE). Totally free for private or commercial projects.
 
 ## ToDo's
 
