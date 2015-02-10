@@ -2,8 +2,6 @@
 
 Bossmin is an easy to use Admin-Theme for Bootstrap 3
 
-## Build with...
-
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## License
