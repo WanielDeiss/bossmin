@@ -1,0 +1,50 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  > li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	a {
+	  display: block;
+	  padding: 10px 15px;
+	  vertical-align: middle;
+	  color: @gray-lighter;
+	  .arrow {
+		margin-top: 2px;
+		float: right;
+		font-weight: bold;
+	  }
+	  .arrow:before {
+		content: "\f104";
+	  }
+	}
+	> a:hover,
+	> a:focus {
+	  text-decoration: none;
+	  background-color: @gray-dark;
+	}
+	ul {
+	  margin: 0;
+	  padding: 0;
+	  background-color: @black;
+	  a {
+		padding-left: 40px;
+	  }
+	  a:hover,
+	  a:focus {
+		color: @gray;
+		text-decoration: none;
+	  }
+	}
+  }
+  li.active {
+	> a {
+	  background-color: @gray-dark;
+	  .arrow:before{
+		content: "\f107";
+	  }
+	}
+  }
+}
