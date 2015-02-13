@@ -1,15 +1,34 @@
 {
   "name": "bossmin",
-  "version": "0.1",
-  "homepage": "http://www.webjedi.de/",
-  "author": {
-    "name": "Daniel Weiß",
-    "url": "http://www.webjedi.de/"
+  "version": "0.0.0",
+  "description": "Bossmin is an easy to use Admin-Theme for Bootstrap 3",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
   },
   "devDependencies": {
+    "cssmin": "^0.4.2",
     "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-nodeunit": "~0.4.1",
-    "grunt-contrib-uglify": "~0.5.0"
-  }
+    "grunt-contrib-cssmin": "^0.12.1",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-remove-logging": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebJedi-DE/bossmin.git"
+  },
+  "keywords": [
+    "CSS",
+    "LESS",
+    "Bootstrap"
+  ],
+  "author": "Daniel Weiß",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebJedi-DE/bossmin/issues"
+  },
+  "homepage": "https://github.com/WebJedi-DE/bossmin"
 }
