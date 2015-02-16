@@ -4,13 +4,9 @@ html,body {
 }
 
 body {
-	font-family: 'Lato', 'Helvetica Neue', Helvetic, Arial, sans-serif;
+	font-family: @boss-main-font;
 	font-weight: 300;
 	background-color: @boss-gray-lighter;
-	margin-top: 90px;
-	@media (min-width: @grid-float-breakpoint) {
-		margin-top: 0;
-	}
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -24,6 +20,22 @@ h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
 	@media (min-width: @grid-float-breakpoint) {
 		display: inline;
 	}
+}
+
+h1, .h1 { font-size: floor(@font-size-h1 * 0.75); }
+h2, .h2 { font-size: floor(@font-size-h2 * 0.75); }
+h3, .h3 { font-size: floor(@font-size-h3 * 0.75); }
+h4, .h4 { font-size: floor(@font-size-h4 * 0.75); }
+h5, .h5 { font-size: floor(@font-size-h4 * 0.75); }
+h6, .h6 { font-size: floor(@font-size-h4 * 0.75); }
+
+@media (min-width: @grid-float-breakpoint) {
+	h1, .h1 { font-size: @font-size-h1; }
+	h2, .h2 { font-size: @font-size-h2; }
+	h3, .h3 { font-size: @font-size-h3; }
+	h4, .h4 { font-size: @font-size-h4; }
+	h5, .h5 { font-size: @font-size-h4; }
+	h6, .h6 { font-size: @font-size-h4; }
 }
 
 a {
@@ -44,8 +56,9 @@ a:hover {
 	height: 100%;
 	color: @gray-lighter;
 	position: relative;
+	padding-top: 90px;
 	@media (min-width: @grid-float-breakpoint) {
-		margin-top: 50px;
+		padding-top: 50px;
 	}
 	> #wrapper-sidebar {
 		background-color: @boss-gray-dark;
