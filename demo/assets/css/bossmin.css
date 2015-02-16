@@ -8,10 +8,19 @@
 /* BOOTSTRAP END */
 html,
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetic, Arial, sans-serif;
-  font-weight: 300;
   min-height: 100%;
   height: 100%;
+}
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetic, Arial, sans-serif;
+  font-weight: 300;
+  background-color: #eeeeee;
+  margin-top: 90px;
+}
+@media (min-width: 768px) {
+  body {
+    margin-top: 0;
+  }
 }
 h1,
 h2,
@@ -28,6 +37,24 @@ h6 > small {
   margin-top: 0;
   font-weight: 300;
 }
+h1 > small,
+h2 > small,
+h3 > small,
+h4 > small,
+h5 > small,
+h6 > small {
+  display: block;
+}
+@media (min-width: 768px) {
+  h1 > small,
+  h2 > small,
+  h3 > small,
+  h4 > small,
+  h5 > small,
+  h6 > small {
+    display: inline;
+  }
+}
 a {
   color: #b5dddd;
 }
@@ -41,9 +68,13 @@ a:hover {
 #wrapper-container {
   min-height: 100%;
   height: 100%;
-  background-color: #eeeeee;
   color: #eeeeee;
   position: relative;
+}
+@media (min-width: 768px) {
+  #wrapper-container {
+    margin-top: 50px;
+  }
 }
 #wrapper-container > #wrapper-sidebar {
   background-color: #313131;
@@ -51,25 +82,7 @@ a:hover {
   width: 100%;
   float: inherit;
 }
-#wrapper-container > #wrapper-content {
-  background-color: #eeeeee;
-  color: #1f1f1f;
-  margin-left: inherit;
-  padding: 20px 25px;
-}
-#wrapper-container .navbar-collapse {
-  max-height: inherit;
-}
-body.login #wrapper-container #wrapper-content {
-  background-color: #313131;
-}
-body.login #wrapper-container {
-  margin-top: 0;
-}
 @media (min-width: 768px) {
-  #wrapper-container {
-    padding-top: 50px;
-  }
   #wrapper-container > #wrapper-sidebar {
     width: 230px;
     padding: 0;
@@ -77,10 +90,21 @@ body.login #wrapper-container {
     height: 100%;
     min-height: 100%;
   }
+}
+#wrapper-container > #wrapper-content {
+  background-color: #eeeeee;
+  color: #1f1f1f;
+  margin-left: inherit;
+}
+@media (min-width: 768px) {
   #wrapper-container > #wrapper-content {
+    padding: 20px 10px;
     width: auto;
     overflow: hidden;
   }
+}
+#wrapper-container .navbar-collapse {
+  max-height: inherit;
 }
 .navbar-bossmin {
   background-color: #313131;

@@ -19,6 +19,13 @@ h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
 	font-weight: 300;
 }
 
+h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
+	display: block;
+	@media (min-width: @grid-float-breakpoint) {
+		display: inline;
+	}
+}
+
 a {
 	color: @link-color;
 }
@@ -37,46 +44,33 @@ a:hover {
 	height: 100%;
 	color: @gray-lighter;
 	position: relative;
+	@media (min-width: @grid-float-breakpoint) {
+		margin-top: 50px;
+	}
 	> #wrapper-sidebar {
 		background-color: @boss-gray-dark;
 		color: @boss-gray-lighter;
 		width: 100%;
 		float: inherit;
-		}
-	> #wrapper-content {
-		background-color: @boss-gray-lighter;
-		color: @boss-gray-darker;
-		margin-left: inherit;
 		@media (min-width: @grid-float-breakpoint) {
-			padding: 20px 10px;
-		}
-	}
-	.navbar-collapse {
-		max-height: inherit;
-	}
-}
-
-body.login #wrapper-container #wrapper-content {
-	background-color: @boss-gray-dark;
-}
-
-body.login #wrapper-container {
-	margin-top: 0;
-}
-
-@media (min-width: @screen-sm-min) {
-	#wrapper-container {
-		padding-top: @boss-navbar-height;
-		> #wrapper-sidebar {
 			width: @sidebar-width;
 			padding: 0;
 			float: left;
 			height: 100%;
 			min-height: 100%;
 		}
-		> #wrapper-content {
+	}
+	> #wrapper-content {
+		background-color: @boss-gray-lighter;
+		color: @boss-gray-darker;
+		margin-left: inherit;
+		@media (min-width: @grid-float-breakpoint) {
+			padding: 20px 10px;
 			width: auto;
 			overflow: hidden;
 		}
+	}
+	.navbar-collapse {
+		max-height: inherit;
 	}
 }
