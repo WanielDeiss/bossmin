@@ -15,12 +15,6 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetic, Arial, sans-serif;
   font-weight: 300;
   background-color: #eeeeee;
-  margin-top: 90px;
-}
-@media (min-width: 768px) {
-  body {
-    margin-top: 0;
-  }
 }
 h1,
 h2,
@@ -55,11 +49,61 @@ h6 > small {
     display: inline;
   }
 }
+h1,
+.h1 {
+  font-size: 27px;
+}
+h2,
+.h2 {
+  font-size: 22px;
+}
+h3,
+.h3 {
+  font-size: 18px;
+}
+h4,
+.h4 {
+  font-size: 13px;
+}
+h5,
+.h5 {
+  font-size: 13px;
+}
+h6,
+.h6 {
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 36px;
+  }
+  h2,
+  .h2 {
+    font-size: 30px;
+  }
+  h3,
+  .h3 {
+    font-size: 24px;
+  }
+  h4,
+  .h4 {
+    font-size: 18px;
+  }
+  h5,
+  .h5 {
+    font-size: 18px;
+  }
+  h6,
+  .h6 {
+    font-size: 18px;
+  }
+}
 a {
-  color: #b5dddd;
+  color: #5eb5b5;
 }
 a:hover {
-  color: #5eb5b5;
+  color: #2e6565;
 }
 #wrapper {
   min-height: 100%;
@@ -70,10 +114,11 @@ a:hover {
   height: 100%;
   color: #eeeeee;
   position: relative;
+  padding-top: 90px;
 }
 @media (min-width: 768px) {
   #wrapper-container {
-    margin-top: 50px;
+    padding-top: 50px;
   }
 }
 #wrapper-container > #wrapper-sidebar {
@@ -326,4 +371,8 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
 }
 .sidebar li.active > a .arrow:before {
   content: "\f107";
+}
+.breadcrumb {
+  background-color: #fbfbfb;
+  border-radius: 0;
 }
