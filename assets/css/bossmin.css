@@ -140,6 +140,7 @@ a:hover {
   background-color: #eeeeee;
   color: #1f1f1f;
   margin-left: inherit;
+  position: relative;
 }
 @media (min-width: 768px) {
   #wrapper-container > #wrapper-content {
@@ -373,6 +374,125 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
   content: "\f107";
 }
 .breadcrumb {
-  background-color: #fbfbfb;
   border-radius: 0;
+}
+.alert {
+  border-radius: 0;
+  border-width: 5px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+.alert .alert-link {
+  text-decoration: underline;
+}
+.alert-boss-default {
+  background-color: #b5dddd;
+  border-color: #5eb5b5;
+  color: #1e4242;
+}
+.alert-boss-default hr {
+  border-top-color: #4fabab;
+}
+.alert-boss-default .alert-link {
+  color: #1e4242;
+}
+.alert-boss-primary {
+  background-color: #d7e8f6;
+  border-color: #99c4e7;
+  color: #276da6;
+}
+.alert-boss-primary hr {
+  border-top-color: #84b8e2;
+}
+.alert-boss-primary .alert-link {
+  color: #276da6;
+}
+.alert-boss-success {
+  background-color: #e9f3cd;
+  border-color: #cae387;
+  color: #769523;
+}
+.alert-boss-success hr {
+  border-top-color: #c1de72;
+}
+.alert-boss-success .alert-link {
+  color: #769523;
+}
+.alert-boss-info {
+  background-color: #d9f3fb;
+  border-color: #aae5f7;
+  color: #15acda;
+}
+.alert-boss-info hr {
+  border-top-color: #93def5;
+}
+.alert-boss-info .alert-link {
+  color: #15acda;
+}
+.alert-boss-warning {
+  background-color: #ffe7a7;
+  border-color: #ffd974;
+  color: #c18c00;
+}
+.alert-boss-warning hr {
+  border-top-color: #ffd25a;
+}
+.alert-boss-warning .alert-link {
+  color: #c18c00;
+}
+.alert-boss-danger {
+  background-color: #ffd3d2;
+  border-color: #ffa19f;
+  color: #ec0500;
+}
+.alert-boss-danger hr {
+  border-top-color: #ff8885;
+}
+.alert-boss-danger .alert-link {
+  color: #ec0500;
+}
+.alert-boss-dark {
+  background-color: #7f7f7f;
+  border-color: #656565;
+  color: #0c0c0c;
+}
+.alert-boss-dark hr {
+  border-top-color: #585858;
+}
+.alert-boss-dark .alert-link {
+  color: #0c0c0c;
+}
+.alert-boss-titan {
+  background-color: #dbe4eb;
+  border-color: #bbcbd8;
+  color: #52738f;
+}
+.alert-boss-titan hr {
+  border-top-color: #abbfcf;
+}
+.alert-boss-titan .alert-link {
+  color: #52738f;
+}
+.alert-boss-purple {
+  background-color: #f7e9f5;
+  border-color: #e9c4e3;
+  color: #b644a4;
+}
+.alert-boss-purple hr {
+  border-top-color: #e2b1da;
+}
+.alert-boss-purple .alert-link {
+  color: #b644a4;
+}
+.alert-boss-pink {
+  background-color: #fcc7d5;
+  border-color: #f997b0;
+  color: #d10c3e;
+}
+.alert-boss-pink hr {
+  border-top-color: #f87f9e;
+}
+.alert-boss-pink .alert-link {
+  color: #d10c3e;
 }
