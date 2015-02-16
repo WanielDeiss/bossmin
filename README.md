@@ -1,9 +1,13 @@
-# [Bossmin](http://webjedi.de/bossmin-demo/)
+# [Bossmin](http://wanieldeiss.github.io/bossmin/)
 ## IN PROGRESS...
 
 Bossmin is an easy to use Admin-Theme for Bootstrap 3
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
+## Demo
+
+[wanieldeiss.github.io/bossmin](https://wanieldeiss.github.io/bossmin/)
 
 ## License
 
