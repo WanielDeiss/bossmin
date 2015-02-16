@@ -373,6 +373,5 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
   content: "\f107";
 }
 .breadcrumb {
-  background-color: #fbfbfb;
   border-radius: 0;
 }
