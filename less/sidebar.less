@@ -2,6 +2,10 @@
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	background-color: @boss-gray-dark;
+	@media (min-width: @grid-float-breakpoint) {
+		margin: 10px;
+	}
 	> li {
 		margin: 0;
 		padding: 0;
@@ -11,6 +15,10 @@
 			padding: 10px 15px;
 			vertical-align: middle;
 			color: @boss-gray-lighter;
+			i.fa {
+				display: inline-block;
+				min-width: 28px;
+			}
 			.arrow {
 				margin-top: 2px;
 				float: right;

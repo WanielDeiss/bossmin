@@ -1,7 +1,8 @@
 module.exports = function(grunt) {
 	// Project Settings
 	var jsFiles = [
-		'js/sidebar.js'
+		'js/sidebar.js',
+		'js/sidebar-collapse.js'
 	];
 
 	// Project configuration.
@@ -45,7 +46,7 @@ module.exports = function(grunt) {
 				dest: 'demo/assets/css/<%= pkg.name %>.min.css'
 			}
 		},
-
+/*
 		removelogging: {
 			dist: {
 				src: 'dist/js/*.js'
@@ -54,7 +55,7 @@ module.exports = function(grunt) {
 				src: 'demo/assets/js/*.js'
 			}
 		},
-
+*/
 		concat: {
 			dist: {
 				src: jsFiles,
@@ -109,14 +110,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-remove-logging');
+	//grunt.loadNpmTasks('grunt-remove-logging');
 	// Default task(s).
 	grunt.registerTask('default', [
 		'clean',
 		'less',
 		'cssmin',
 		'concat',
-		'removelogging',
+		//'removelogging',
 		'uglify',
 		'usebanner'
 	]);
