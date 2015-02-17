@@ -122,10 +122,16 @@ a:hover {
   }
 }
 #wrapper-container > #wrapper-sidebar {
-  background-color: #313131;
   color: #eeeeee;
   width: 100%;
   float: inherit;
+  padding: 0;
+}
+#wrapper-container > #wrapper-sidebar.boss-close {
+  width: 100%;
+}
+#wrapper-container > #wrapper-sidebar.boss-close span {
+  display: inline-block;
 }
 @media (min-width: 768px) {
   #wrapper-container > #wrapper-sidebar {
@@ -134,6 +140,12 @@ a:hover {
     float: left;
     height: 100%;
     min-height: 100%;
+  }
+  #wrapper-container > #wrapper-sidebar.boss-close {
+    width: 65px;
+  }
+  #wrapper-container > #wrapper-sidebar.boss-close span {
+    display: none;
   }
 }
 #wrapper-container > #wrapper-content {
@@ -144,7 +156,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   #wrapper-container > #wrapper-content {
-    padding: 20px 10px;
+    padding: 20px 10px 20px 0;
     width: auto;
     overflow: hidden;
   }
@@ -329,6 +341,12 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: #313131;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    margin: 10px;
+  }
 }
 .sidebar > li {
   margin: 0;
@@ -340,6 +358,10 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
   padding: 10px 15px;
   vertical-align: middle;
   color: #eeeeee;
+}
+.sidebar > li a i.fa {
+  display: inline-block;
+  min-width: 28px;
 }
 .sidebar > li a .arrow {
   margin-top: 2px;
