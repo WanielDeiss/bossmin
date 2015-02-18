@@ -1,0 +1,32 @@
+.bossbox {
+	border-radius: 4px;
+	background-color: @boss-gray-lightest;
+	padding: 15px;
+	> .bossbox-head {
+		line-height: 1.3em;
+		vertical-align: middle;
+		&:before,
+		&:after {
+			content: " "; // 1
+			display: table; // 2
+		}
+		&:after {
+			clear: both;
+		}
+		> .bossbox-title {
+			float: left;
+			font-size: 1.3em;
+			font-weight: bold;
+			 h1, h2, h3, h4, h5, h6 {
+				 font-size: 1.3em;
+			 }
+		}
+		> .bossbox-actions {
+			float: right;
+		}
+	}
+	> .bossbox-body {}
+	> .bossbox-foot {
+		font-weight: normal;
+	}
+}

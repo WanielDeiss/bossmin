@@ -3,6 +3,9 @@
 	padding: 0;
 	overflow: hidden;
 	background-color: @boss-gray-dark;
+	@media (min-width: @grid-float-breakpoint) {
+		border-radius: 4px;
+	}
 	[data-toggle="boss-collapse"] {
 		display: none;
 		@media (min-width: @grid-float-breakpoint) {

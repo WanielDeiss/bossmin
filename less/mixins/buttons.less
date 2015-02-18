@@ -1,0 +1,36 @@
+.boss-button-variant(@color; @background;) {
+	color: @color;
+	background-color: @background;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @color;
+		background-color: darken(@background, 10%);
+	}
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			background-color: @background;
+		}
+	}
+
+	.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
