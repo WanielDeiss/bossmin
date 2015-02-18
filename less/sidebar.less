@@ -3,13 +3,19 @@
 	padding: 0;
 	overflow: hidden;
 	background-color: @boss-gray-dark;
-	@media (min-width: @grid-float-breakpoint) {
-		margin: 10px;
+	[data-toggle="boss-collapse"] {
+		display: none;
+		@media (min-width: @grid-float-breakpoint) {
+			display: block;
+		}
 	}
 	> li {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		@media (min-width: @grid-float-breakpoint) {
+			width: (@sidebar-width - 20px);
+		}
 		a {
 			display: block;
 			padding: 10px 15px;

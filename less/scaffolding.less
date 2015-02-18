@@ -63,24 +63,28 @@ a:hover {
 	> #wrapper-sidebar {
 		color: @boss-gray-lighter;
 		width: 100%;
-		float: inherit;
 		padding: 0;
+		float: inherit;
+		.transition(width 1s);
+		span {
+			.transition(opacity 1s);
+		}
 		&.boss-close {
 			width: 100%;
 			span {
-				display: inline-block;
+				opacity: 1;
 			}
 		}
 		@media (min-width: @grid-float-breakpoint) {
 			width: @sidebar-width;
-			padding: 0;
+			padding: 10px;
 			float: left;
 			height: 100%;
 			min-height: 100%;
 			&.boss-close {
 				width: @sidebar-small-width;
 				span {
-					display: none;
+					opacity: 0;
 				}
 			}
 		}
