@@ -124,19 +124,27 @@ a:hover {
 #wrapper-container > #wrapper-sidebar {
   color: #eeeeee;
   width: 100%;
-  float: inherit;
   padding: 0;
+  float: inherit;
+  -webkit-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+#wrapper-container > #wrapper-sidebar span {
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
 }
 #wrapper-container > #wrapper-sidebar.boss-close {
   width: 100%;
 }
 #wrapper-container > #wrapper-sidebar.boss-close span {
-  display: inline-block;
+  opacity: 1;
 }
 @media (min-width: 768px) {
   #wrapper-container > #wrapper-sidebar {
     width: 230px;
-    padding: 0;
+    padding: 10px;
     float: left;
     height: 100%;
     min-height: 100%;
@@ -145,7 +153,7 @@ a:hover {
     width: 65px;
   }
   #wrapper-container > #wrapper-sidebar.boss-close span {
-    display: none;
+    opacity: 0;
   }
 }
 #wrapper-container > #wrapper-content {
@@ -345,13 +353,26 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
 }
 @media (min-width: 768px) {
   .sidebar {
-    margin: 10px;
+    border-radius: 4px;
+  }
+}
+.sidebar [data-toggle="boss-collapse"] {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar [data-toggle="boss-collapse"] {
+    display: block;
   }
 }
 .sidebar > li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .sidebar > li {
+    width: 210px;
+  }
 }
 .sidebar > li a {
   display: block;
@@ -395,11 +416,7 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
 .sidebar li.active > a .arrow:before {
   content: "\f107";
 }
-.breadcrumb {
-  border-radius: 0;
-}
 .alert {
-  border-radius: 0;
   border-width: 5px;
   border-top: none;
   border-right: none;
@@ -517,4 +534,463 @@ fieldset[disabled] .navbar-bossmin .btn-link:focus {
 }
 .alert-boss-pink .alert-link {
   color: #d10c3e;
+}
+.bossbox {
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+.bossbox > .bossbox-head {
+  line-height: 1.3em;
+  vertical-align: middle;
+}
+.bossbox > .bossbox-head:before,
+.bossbox > .bossbox-head:after {
+  content: " ";
+  display: table;
+}
+.bossbox > .bossbox-head:after {
+  clear: both;
+}
+.bossbox > .bossbox-head > .bossbox-title {
+  float: left;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.bossbox > .bossbox-head > .bossbox-title h1,
+.bossbox > .bossbox-head > .bossbox-title h2,
+.bossbox > .bossbox-head > .bossbox-title h3,
+.bossbox > .bossbox-head > .bossbox-title h4,
+.bossbox > .bossbox-head > .bossbox-title h5,
+.bossbox > .bossbox-head > .bossbox-title h6 {
+  font-size: 1.3em;
+}
+.bossbox > .bossbox-head > .bossbox-actions {
+  float: right;
+}
+.bossbox > .bossbox-foot {
+  font-weight: normal;
+}
+.btn {
+  border: none;
+}
+.btn-boss-default {
+  color: #ffffff;
+  background-color: #5eb5b5;
+}
+.btn-boss-default:hover,
+.btn-boss-default:focus,
+.btn-boss-default.focus,
+.btn-boss-default:active,
+.btn-boss-default.active,
+.open > .dropdown-toggle.btn-boss-default {
+  color: #ffffff;
+  background-color: #479999;
+}
+.btn-boss-default:active,
+.btn-boss-default.active,
+.open > .dropdown-toggle.btn-boss-default {
+  background-image: none;
+}
+.btn-boss-default.disabled,
+.btn-boss-default[disabled],
+fieldset[disabled] .btn-boss-default,
+.btn-boss-default.disabled:hover,
+.btn-boss-default[disabled]:hover,
+fieldset[disabled] .btn-boss-default:hover,
+.btn-boss-default.disabled:focus,
+.btn-boss-default[disabled]:focus,
+fieldset[disabled] .btn-boss-default:focus,
+.btn-boss-default.disabled.focus,
+.btn-boss-default[disabled].focus,
+fieldset[disabled] .btn-boss-default.focus,
+.btn-boss-default.disabled:active,
+.btn-boss-default[disabled]:active,
+fieldset[disabled] .btn-boss-default:active,
+.btn-boss-default.disabled.active,
+.btn-boss-default[disabled].active,
+fieldset[disabled] .btn-boss-default.active {
+  background-color: #5eb5b5;
+}
+.btn-boss-default .badge {
+  color: #5eb5b5;
+  background-color: #ffffff;
+}
+.btn-boss-primary {
+  color: #ffffff;
+  background-color: #70acdd;
+}
+.btn-boss-primary:hover,
+.btn-boss-primary:focus,
+.btn-boss-primary.focus,
+.btn-boss-primary:active,
+.btn-boss-primary.active,
+.open > .dropdown-toggle.btn-boss-primary {
+  color: #ffffff;
+  background-color: #4694d4;
+}
+.btn-boss-primary:active,
+.btn-boss-primary.active,
+.open > .dropdown-toggle.btn-boss-primary {
+  background-image: none;
+}
+.btn-boss-primary.disabled,
+.btn-boss-primary[disabled],
+fieldset[disabled] .btn-boss-primary,
+.btn-boss-primary.disabled:hover,
+.btn-boss-primary[disabled]:hover,
+fieldset[disabled] .btn-boss-primary:hover,
+.btn-boss-primary.disabled:focus,
+.btn-boss-primary[disabled]:focus,
+fieldset[disabled] .btn-boss-primary:focus,
+.btn-boss-primary.disabled.focus,
+.btn-boss-primary[disabled].focus,
+fieldset[disabled] .btn-boss-primary.focus,
+.btn-boss-primary.disabled:active,
+.btn-boss-primary[disabled]:active,
+fieldset[disabled] .btn-boss-primary:active,
+.btn-boss-primary.disabled.active,
+.btn-boss-primary[disabled].active,
+fieldset[disabled] .btn-boss-primary.active {
+  background-color: #70acdd;
+}
+.btn-boss-primary .badge {
+  color: #70acdd;
+  background-color: #ffffff;
+}
+.btn-boss-success {
+  color: #ffffff;
+  background-color: #afd549;
+}
+.btn-boss-success:hover,
+.btn-boss-success:focus,
+.btn-boss-success.focus,
+.btn-boss-success:active,
+.btn-boss-success.active,
+.open > .dropdown-toggle.btn-boss-success {
+  color: #ffffff;
+  background-color: #97be2c;
+}
+.btn-boss-success:active,
+.btn-boss-success.active,
+.open > .dropdown-toggle.btn-boss-success {
+  background-image: none;
+}
+.btn-boss-success.disabled,
+.btn-boss-success[disabled],
+fieldset[disabled] .btn-boss-success,
+.btn-boss-success.disabled:hover,
+.btn-boss-success[disabled]:hover,
+fieldset[disabled] .btn-boss-success:hover,
+.btn-boss-success.disabled:focus,
+.btn-boss-success[disabled]:focus,
+fieldset[disabled] .btn-boss-success:focus,
+.btn-boss-success.disabled.focus,
+.btn-boss-success[disabled].focus,
+fieldset[disabled] .btn-boss-success.focus,
+.btn-boss-success.disabled:active,
+.btn-boss-success[disabled]:active,
+fieldset[disabled] .btn-boss-success:active,
+.btn-boss-success.disabled.active,
+.btn-boss-success[disabled].active,
+fieldset[disabled] .btn-boss-success.active {
+  background-color: #afd549;
+}
+.btn-boss-success .badge {
+  color: #afd549;
+  background-color: #ffffff;
+}
+.btn-boss-info {
+  color: #ffffff;
+  background-color: #7bd7f3;
+}
+.btn-boss-info:hover,
+.btn-boss-info:focus,
+.btn-boss-info.focus,
+.btn-boss-info:active,
+.btn-boss-info.active,
+.open > .dropdown-toggle.btn-boss-info {
+  color: #ffffff;
+  background-color: #4dc8ee;
+}
+.btn-boss-info:active,
+.btn-boss-info.active,
+.open > .dropdown-toggle.btn-boss-info {
+  background-image: none;
+}
+.btn-boss-info.disabled,
+.btn-boss-info[disabled],
+fieldset[disabled] .btn-boss-info,
+.btn-boss-info.disabled:hover,
+.btn-boss-info[disabled]:hover,
+fieldset[disabled] .btn-boss-info:hover,
+.btn-boss-info.disabled:focus,
+.btn-boss-info[disabled]:focus,
+fieldset[disabled] .btn-boss-info:focus,
+.btn-boss-info.disabled.focus,
+.btn-boss-info[disabled].focus,
+fieldset[disabled] .btn-boss-info.focus,
+.btn-boss-info.disabled:active,
+.btn-boss-info[disabled]:active,
+fieldset[disabled] .btn-boss-info:active,
+.btn-boss-info.disabled.active,
+.btn-boss-info[disabled].active,
+fieldset[disabled] .btn-boss-info.active {
+  background-color: #7bd7f3;
+}
+.btn-boss-info .badge {
+  color: #7bd7f3;
+  background-color: #ffffff;
+}
+.btn-boss-warning {
+  color: #ffffff;
+  background-color: #ffcb41;
+}
+.btn-boss-warning:hover,
+.btn-boss-warning:focus,
+.btn-boss-warning.focus,
+.btn-boss-warning:active,
+.btn-boss-warning.active,
+.open > .dropdown-toggle.btn-boss-warning {
+  color: #ffffff;
+  background-color: #ffbd0e;
+}
+.btn-boss-warning:active,
+.btn-boss-warning.active,
+.open > .dropdown-toggle.btn-boss-warning {
+  background-image: none;
+}
+.btn-boss-warning.disabled,
+.btn-boss-warning[disabled],
+fieldset[disabled] .btn-boss-warning,
+.btn-boss-warning.disabled:hover,
+.btn-boss-warning[disabled]:hover,
+fieldset[disabled] .btn-boss-warning:hover,
+.btn-boss-warning.disabled:focus,
+.btn-boss-warning[disabled]:focus,
+fieldset[disabled] .btn-boss-warning:focus,
+.btn-boss-warning.disabled.focus,
+.btn-boss-warning[disabled].focus,
+fieldset[disabled] .btn-boss-warning.focus,
+.btn-boss-warning.disabled:active,
+.btn-boss-warning[disabled]:active,
+fieldset[disabled] .btn-boss-warning:active,
+.btn-boss-warning.disabled.active,
+.btn-boss-warning[disabled].active,
+fieldset[disabled] .btn-boss-warning.active {
+  background-color: #ffcb41;
+}
+.btn-boss-warning .badge {
+  color: #ffcb41;
+  background-color: #ffffff;
+}
+.btn-boss-danger {
+  color: #ffffff;
+  background-color: #ff6f6c;
+}
+.btn-boss-danger:hover,
+.btn-boss-danger:focus,
+.btn-boss-danger.focus,
+.btn-boss-danger:active,
+.btn-boss-danger.active,
+.open > .dropdown-toggle.btn-boss-danger {
+  color: #ffffff;
+  background-color: #ff3d39;
+}
+.btn-boss-danger:active,
+.btn-boss-danger.active,
+.open > .dropdown-toggle.btn-boss-danger {
+  background-image: none;
+}
+.btn-boss-danger.disabled,
+.btn-boss-danger[disabled],
+fieldset[disabled] .btn-boss-danger,
+.btn-boss-danger.disabled:hover,
+.btn-boss-danger[disabled]:hover,
+fieldset[disabled] .btn-boss-danger:hover,
+.btn-boss-danger.disabled:focus,
+.btn-boss-danger[disabled]:focus,
+fieldset[disabled] .btn-boss-danger:focus,
+.btn-boss-danger.disabled.focus,
+.btn-boss-danger[disabled].focus,
+fieldset[disabled] .btn-boss-danger.focus,
+.btn-boss-danger.disabled:active,
+.btn-boss-danger[disabled]:active,
+fieldset[disabled] .btn-boss-danger:active,
+.btn-boss-danger.disabled.active,
+.btn-boss-danger[disabled].active,
+fieldset[disabled] .btn-boss-danger.active {
+  background-color: #ff6f6c;
+}
+.btn-boss-danger .badge {
+  color: #ff6f6c;
+  background-color: #ffffff;
+}
+.btn-boss-dark {
+  color: #ffffff;
+  background-color: #656565;
+}
+.btn-boss-dark:hover,
+.btn-boss-dark:focus,
+.btn-boss-dark.focus,
+.btn-boss-dark:active,
+.btn-boss-dark.active,
+.open > .dropdown-toggle.btn-boss-dark {
+  color: #ffffff;
+  background-color: #4b4b4b;
+}
+.btn-boss-dark:active,
+.btn-boss-dark.active,
+.open > .dropdown-toggle.btn-boss-dark {
+  background-image: none;
+}
+.btn-boss-dark.disabled,
+.btn-boss-dark[disabled],
+fieldset[disabled] .btn-boss-dark,
+.btn-boss-dark.disabled:hover,
+.btn-boss-dark[disabled]:hover,
+fieldset[disabled] .btn-boss-dark:hover,
+.btn-boss-dark.disabled:focus,
+.btn-boss-dark[disabled]:focus,
+fieldset[disabled] .btn-boss-dark:focus,
+.btn-boss-dark.disabled.focus,
+.btn-boss-dark[disabled].focus,
+fieldset[disabled] .btn-boss-dark.focus,
+.btn-boss-dark.disabled:active,
+.btn-boss-dark[disabled]:active,
+fieldset[disabled] .btn-boss-dark:active,
+.btn-boss-dark.disabled.active,
+.btn-boss-dark[disabled].active,
+fieldset[disabled] .btn-boss-dark.active {
+  background-color: #656565;
+}
+.btn-boss-dark .badge {
+  color: #656565;
+  background-color: #ffffff;
+}
+.btn-boss-titan {
+  color: #ffffff;
+  background-color: #9bb2c5;
+}
+.btn-boss-titan:hover,
+.btn-boss-titan:focus,
+.btn-boss-titan.focus,
+.btn-boss-titan:active,
+.btn-boss-titan.active,
+.open > .dropdown-toggle.btn-boss-titan {
+  color: #ffffff;
+  background-color: #7a99b3;
+}
+.btn-boss-titan:active,
+.btn-boss-titan.active,
+.open > .dropdown-toggle.btn-boss-titan {
+  background-image: none;
+}
+.btn-boss-titan.disabled,
+.btn-boss-titan[disabled],
+fieldset[disabled] .btn-boss-titan,
+.btn-boss-titan.disabled:hover,
+.btn-boss-titan[disabled]:hover,
+fieldset[disabled] .btn-boss-titan:hover,
+.btn-boss-titan.disabled:focus,
+.btn-boss-titan[disabled]:focus,
+fieldset[disabled] .btn-boss-titan:focus,
+.btn-boss-titan.disabled.focus,
+.btn-boss-titan[disabled].focus,
+fieldset[disabled] .btn-boss-titan.focus,
+.btn-boss-titan.disabled:active,
+.btn-boss-titan[disabled]:active,
+fieldset[disabled] .btn-boss-titan:active,
+.btn-boss-titan.disabled.active,
+.btn-boss-titan[disabled].active,
+fieldset[disabled] .btn-boss-titan.active {
+  background-color: #9bb2c5;
+}
+.btn-boss-titan .badge {
+  color: #9bb2c5;
+  background-color: #ffffff;
+}
+.btn-boss-purple {
+  color: #ffffff;
+  background-color: #db9fd1;
+}
+.btn-boss-purple:hover,
+.btn-boss-purple:focus,
+.btn-boss-purple.focus,
+.btn-boss-purple:active,
+.btn-boss-purple.active,
+.open > .dropdown-toggle.btn-boss-purple {
+  color: #ffffff;
+  background-color: #cd7ac0;
+}
+.btn-boss-purple:active,
+.btn-boss-purple.active,
+.open > .dropdown-toggle.btn-boss-purple {
+  background-image: none;
+}
+.btn-boss-purple.disabled,
+.btn-boss-purple[disabled],
+fieldset[disabled] .btn-boss-purple,
+.btn-boss-purple.disabled:hover,
+.btn-boss-purple[disabled]:hover,
+fieldset[disabled] .btn-boss-purple:hover,
+.btn-boss-purple.disabled:focus,
+.btn-boss-purple[disabled]:focus,
+fieldset[disabled] .btn-boss-purple:focus,
+.btn-boss-purple.disabled.focus,
+.btn-boss-purple[disabled].focus,
+fieldset[disabled] .btn-boss-purple.focus,
+.btn-boss-purple.disabled:active,
+.btn-boss-purple[disabled]:active,
+fieldset[disabled] .btn-boss-purple:active,
+.btn-boss-purple.disabled.active,
+.btn-boss-purple[disabled].active,
+fieldset[disabled] .btn-boss-purple.active {
+  background-color: #db9fd1;
+}
+.btn-boss-purple .badge {
+  color: #db9fd1;
+  background-color: #ffffff;
+}
+.btn-boss-pink {
+  color: #ffffff;
+  background-color: #f6678b;
+}
+.btn-boss-pink:hover,
+.btn-boss-pink:focus,
+.btn-boss-pink.focus,
+.btn-boss-pink:active,
+.btn-boss-pink.active,
+.open > .dropdown-toggle.btn-boss-pink {
+  color: #ffffff;
+  background-color: #f33767;
+}
+.btn-boss-pink:active,
+.btn-boss-pink.active,
+.open > .dropdown-toggle.btn-boss-pink {
+  background-image: none;
+}
+.btn-boss-pink.disabled,
+.btn-boss-pink[disabled],
+fieldset[disabled] .btn-boss-pink,
+.btn-boss-pink.disabled:hover,
+.btn-boss-pink[disabled]:hover,
+fieldset[disabled] .btn-boss-pink:hover,
+.btn-boss-pink.disabled:focus,
+.btn-boss-pink[disabled]:focus,
+fieldset[disabled] .btn-boss-pink:focus,
+.btn-boss-pink.disabled.focus,
+.btn-boss-pink[disabled].focus,
+fieldset[disabled] .btn-boss-pink.focus,
+.btn-boss-pink.disabled:active,
+.btn-boss-pink[disabled]:active,
+fieldset[disabled] .btn-boss-pink:active,
+.btn-boss-pink.disabled.active,
+.btn-boss-pink[disabled].active,
+fieldset[disabled] .btn-boss-pink.active {
+  background-color: #f6678b;
+}
+.btn-boss-pink .badge {
+  color: #f6678b;
+  background-color: #ffffff;
 }
