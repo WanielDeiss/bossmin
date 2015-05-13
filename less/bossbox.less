@@ -2,6 +2,7 @@
 	border-radius: 4px;
 	background-color: @boss-gray-lightest;
 	padding: 15px;
+	margin-bottom: 20px;
 	> .bossbox-head {
 		line-height: 1.3em;
 		vertical-align: middle;
@@ -14,15 +15,21 @@
 			clear: both;
 		}
 		> .bossbox-title {
-			float: left;
 			font-size: 1.3em;
 			font-weight: bold;
-			 h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 15px;
+			@media (min-width: @grid-float-breakpoint) {
+				float: left;
+			}
+			h1, h2, h3, h4, h5, h6 {
 				 font-size: 1.3em;
 			 }
 		}
 		> .bossbox-actions {
-			float: right;
+			margin-bottom: 15px;
+			@media (min-width: @grid-float-breakpoint) {
+				float: right;
+			}
 		}
 	}
 	> .bossbox-body {}

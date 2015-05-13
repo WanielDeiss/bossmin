@@ -1,68 +1,80 @@
-/*
- * Based on metisMenu v1.0.2
- * Thanks to Osman Nuri Okumus
- */
+;(function ( $, window, document, undefined ) {
 
-;(function ($, window, document, undefined) {
-
-	var pluginName = "metisMenu",
-		defaults = {
-			toggle: true
-		};
-
-	function Plugin(element, options) {
-		this.element = element;
-		this.settings = $.extend({}, defaults, options);
-		this._defaults = defaults;
-		this._name = pluginName;
-		this.init();
-	}
-
-	Plugin.prototype = {
-		init: function () {
-
-			var $this = $(this.element),
-				$toggle = this.settings.toggle;
-
-			if (this.isIE() <= 9) {
-				$this.find('li.active').has('ul').children('ul').collapse('show');
-				$this.find('li').not('.active').has('ul').children('ul').collapse('hide');
-			} else {
-				$this.find('li.active').has('ul').children('ul').addClass('collapse in');
-				$this.find('li').not('.active').has('ul').children('ul').addClass('collapse');
-			}
-
-			$this.find('li').has('ul').children('a').on('click', function (e) {
-				e.preventDefault();
-
-				$(this).parent('li').toggleClass('active').children('ul').collapse('toggle');
-
-				if ($toggle) {
-					$(this).parent('li').siblings().removeClass('active').children('ul.in').collapse('hide');
-				}
-			});
-		},
-
-		isIE: function() {
-			var undef,
-				v = 3,
-				div = document.createElement('div'),
-				all = div.getElementsByTagName('i');
-
-			while (
-				div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
-					all[0]
-				);
-			return v > 4 ? v : undef;
-		}
+	var toggle         = '[data-toggle="boss-sidebar-dropdown"]';
+	var BossDropdown   = function(element) {
+		$(element).on('click.boss.sidebar.dropdown', this.toggle);
 	};
 
-	$.fn[ pluginName ] = function (options) {
-		return this.each(function () {
-			if (!$.data(this, "plugin_" + pluginName)) {
-				$.data(this, "plugin_" + pluginName, new Plugin(this, options));
+	BossDropdown.VERSION = '0.0.0';
+
+	BossDropdown.prototype.toggle = function (e) {
+		e.preventDefault();
+
+		var $this = $(this);
+		var $parent = $this.parent();
+		var $sidebarMenu = getSidebarMenu($parent);
+		var isOpen = $parent.hasClass('open');
+		var collapseOpen = $('#wrapper-sidebar').hasClass('boss-close');
+
+		if(!collapseOpen) {
+			if (!isOpen) {
+				BossDropdown.prototype.open($this, $parent, $sidebarMenu);
+			} else {
+				BossDropdown.prototype.close($this, $parent, $sidebarMenu);
 			}
+		} else {
+			BossDropdown.prototype.closeall;
+		}
+
+		$this.blur();
+	};
+
+	BossDropdown.prototype.open = function ($this, $parent, $sidebarMenu) {
+		$this.addClass('up');
+		$parent.addClass('open');
+	};
+
+	BossDropdown.prototype.close = function ($this, $parent, $sidebarMenu) {
+		$this.removeClass('up');
+		$parent.removeClass('open');
+	};
+
+	BossDropdown.prototype.closeall = function() {
+		var $sidebarDropdownMenu = $('.sidebar-dropdown-menu'),
+			$parent = $sidebarDropdownMenu.parent(),
+			$up = $parent.find('.up');
+		$parent.removeClass('open');
+		$up.removeClass('up');
+		$sidebarDropdownMenu.hide(function() {
+			removeStyleAttr(this);
 		});
 	};
 
-})(jQuery, window, document);
+	function removeStyleAttr($this) {
+		$($this).removeAttr('style');
+	}
+
+	function getSidebarMenu($this) {
+		return $this.find('.sidebar-dropdown-menu');
+	}
+
+	function Plugin(option) {
+		return this.each(function () {
+			var $this = $(this);
+			var data = $this.data('boss.sidebar.dropdown');
+
+			if(!data) {
+				$this.data('boss.sidebar.dropdown', (data = new BossDropdown(this)));
+			}
+			if(typeof option == 'string') {
+				data[option].call($this);
+			}
+		});
+	}
+
+	$.fn.bossDropdown             = Plugin;
+	$.fn.bossDropdown.Constructor = BossDropdown;
+
+	$(document).on('click.boss.sidebar.dropdown', toggle, BossDropdown.prototype.toggle);
+	$(document).on('boss.sidebar.closed', BossDropdown.prototype.closeall);
+})( jQuery, window, document );

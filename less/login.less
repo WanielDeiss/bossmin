@@ -1,0 +1,48 @@
+body#login {
+	background-color: @boss-gray-dark;
+	padding: 20px 10px 0 10px;
+	@media (min-width: @grid-float-breakpoint) {
+		padding: 100px 0 0 0;
+	}
+}
+
+.boss-login-logo {
+	text-align: center;
+	margin-bottom: 20px;
+	@media (min-width: @grid-float-breakpoint) {
+		margin-bottom: 40px;
+	}
+	> img {
+		width: 75%;
+	}
+}
+
+.boss-login {
+	background-color:  @boss-gray-lighter;
+	border-radius: @boss-border-radius;
+	padding: 20px;
+	.boss-login-head {
+		text-align: center;
+		padding-bottom: 10px;
+		@media (min-width: @grid-float-breakpoint) {
+			padding-bottom: 20px;
+		}
+		> .boss-login-title {
+			font-size: 2.3em;
+			font-weight: normal;
+			color: @boss-default;
+		}
+	}
+
+	.boss-login-body {
+		.boss-login-with {
+			margin-top: 20px;
+			line-height: 2.5em;
+			vertical-align: middle;
+
+			a {
+				font-size: 2.5em;
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+.notifications {
+	margin: 0;
+	padding: 0;
+	> li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: relative;
+		&:hover > .actions,
+		&:focus > .actions {
+			@media (min-width: @grid-float-breakpoint) {
+				display: block;
+			}
+		}
+		&:nth-child(odd) {
+			background-color: @boss-gray-lighter;
+			&:hover {
+				background-color: lighten(@boss-gray-lightest, 1.5%);
+			}
+		}
+		&:nth-child(even) {
+			background-color: @boss-gray-lightest;
+			&:hover {
+				background-color: lighten(@boss-gray-lightest, 1.5%);
+			}
+		}
+		> a {
+			display: block;
+			margin-right: 25px;
+			padding: 10px;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+			> .nf-inner-wrap {
+				position: relative;
+				> .nf-img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 40px;
+					> img {
+						width: 40px;
+					}
+				}
+				> .nf-info {
+					margin-left: 50px;
+					min-height: 40px;
+				}
+			}
+		}
+		> .actions {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 25px;
+			text-align: right;
+			@media (min-width: @grid-float-breakpoint) {
+				display: none;
+			}
+		}
+	}
+}

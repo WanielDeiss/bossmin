@@ -65,15 +65,8 @@ a:hover {
 		width: 100%;
 		padding: 0;
 		float: inherit;
-		.transition(width 1s);
-		span {
-			.transition(opacity 1s);
-		}
 		&.boss-close {
 			width: 100%;
-			span {
-				opacity: 1;
-			}
 		}
 		@media (min-width: @grid-float-breakpoint) {
 			width: @sidebar-width;
@@ -82,9 +75,10 @@ a:hover {
 			height: 100%;
 			min-height: 100%;
 			&.boss-close {
-				width: @sidebar-small-width;
-				span {
-					opacity: 0;
+				width: @sidebar-small-width-wrapper;
+				.sidebar > li > a > span,
+				.sidebar-dropdown > a:first-child:after {
+					display: none;
 				}
 			}
 		}

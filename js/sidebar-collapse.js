@@ -17,7 +17,6 @@
 		var $sidebarWrapper = getSidebarWrapper($this);
 		var $icon = getIcon($this);
 		var isClosed = $sidebarWrapper.hasClass('boss-close');
-		console.log(isClosed);
 
 		if (!isClosed) {
 			BossCollapse.prototype.close($icon, $sidebarWrapper);
@@ -30,19 +29,17 @@
 		var event = $.Event('boss.sidebar.close');
 		$(document).trigger(event);
 		$icon.removeClass('fa-chevron-circle-left').addClass('fa-chevron-circle-right');
-		$sidebarWrapper.addClass('boss-close').one('transitionend', function() {
-			var event = $.Event('boss.sidebar.closed');
-			$(document).trigger(event);
-		});
+		$sidebarWrapper.addClass('boss-close');
+		var event = $.Event('boss.sidebar.closed');
+		$(document).trigger(event);
 	};
 	BossCollapse.prototype.open = function($icon, $sidebarWrapper) {
 		var event = $.Event('boss.sidebar.open');
 		$(document).trigger(event);
 		$icon.removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-left');
-		$sidebarWrapper.removeClass('boss-close').one('transitionend', function() {
-			var event = $.Event('boss.sidebar.opened');
-			$(document).trigger(event);
-		});
+		$sidebarWrapper.removeClass('boss-close');
+		var event = $.Event('boss.sidebar.opened');
+		$(document).trigger(event);
 	};
 
 	function getSidebarWrapper($this) {

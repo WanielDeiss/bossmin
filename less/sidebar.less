@@ -1,7 +1,6 @@
 .sidebar {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	background-color: @boss-gray-dark;
 	@media (min-width: @grid-float-breakpoint) {
 		border-radius: 4px;
@@ -16,14 +15,16 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		@media (min-width: @grid-float-breakpoint) {
-			width: (@sidebar-width - 20px);
-		}
 		a {
+			overflow: hidden;
+			height: @sidebar-height;
 			display: block;
 			padding: 10px 15px;
 			vertical-align: middle;
 			color: @boss-gray-lighter;
+			span {
+				// asdf
+			}
 			i.fa {
 				display: inline-block;
 				min-width: 28px;
@@ -45,15 +46,27 @@
 		ul {
 			margin: 0;
 			padding: 0;
-			background-color: @boss-black;
+			background-color: @boss-gray-darker;
 			a {
 				padding-left: 40px;
 			}
 			a:hover,
 			a:focus {
-				color: @boss-gray;
+				color: @boss-black;
 				text-decoration: none;
 			}
+		}
+	}
+	> li:first-child {
+		> a:hover
+		> a.focus {
+			border-radius: 4px 4px 0 0;
+		}
+	}
+	> li:last-child {
+		> a:hover
+		> a:focus {
+			border-radius: 0 0 4px 4px;
 		}
 	}
 	li.active {
