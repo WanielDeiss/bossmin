@@ -1,0 +1,53 @@
+{
+  "name": "bossmin",
+  "version": "2.0.0-alpha",
+  "description": "modular admin theme",
+  "keywords": [
+    "css",
+    "design",
+    "framework",
+    "mobile-first",
+    "responsive",
+    "theme"
+  ],
+  "homepage": "https://wanieldeiss.github.io/bossmin",
+  "bugs": {
+    "url": "https://github.com/wanieldeiss/bossmin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanieldeiss/bossmin.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Weiß",
+    "email": "wanieldeiss@gmail.com",
+    "url": "https://sircode.xyz"
+  },
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "build": "gulp build",
+    "build:production": "gulp build --production",
+    "build:scss": "gulp buildScss",
+    "build:scss:production": "gulp buildScss --production",
+    "start": "gulp",
+    "prettify:scss": "prettier --write scss/**/*.scss"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.24.6",
+    "foundation-sites": "^6.5.0-rc.2",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "prettier": "^1.14.2",
+    "yargs": "^12.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
