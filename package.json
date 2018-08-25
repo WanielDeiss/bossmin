@@ -1,37 +1,53 @@
 {
   "name": "bossmin",
-  "version": "0.0.0",
-  "description": "Bossmin is an easy to use Admin-Theme for Bootstrap 3",
-  "directories": {
-    "doc": "docs"
-  },
-  "dependencies": {
-    "grunt": "^0.4.5"
-  },
-  "devDependencies": {
-    "cssmin": "^0.4.2",
-    "grunt": "^0.4.5",
-    "grunt-banner": "^0.3.1",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.12.1",
-    "grunt-contrib-less": "^1.0.0",
-    "grunt-contrib-uglify": "^0.7.0",
-    "grunt-remove-logging": "^0.2.0"
+  "version": "2.0.0-alpha",
+  "description": "modular admin theme",
+  "keywords": [
+    "css",
+    "design",
+    "framework",
+    "mobile-first",
+    "responsive",
+    "theme"
+  ],
+  "homepage": "https://wanieldeiss.github.io/bossmin",
+  "bugs": {
+    "url": "https://github.com/wanieldeiss/bossmin/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WebJedi-DE/bossmin.git"
+    "url": "git+https://github.com/wanieldeiss/bossmin.git"
   },
-  "keywords": [
-    "CSS",
-    "LESS",
-    "Bootstrap"
-  ],
-  "author": "Daniel Weiß",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/WebJedi-DE/bossmin/issues"
+  "author": {
+    "name": "Daniel Weiß",
+    "email": "wanieldeiss@gmail.com",
+    "url": "https://sircode.xyz"
   },
-  "homepage": "https://github.com/WebJedi-DE/bossmin"
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "build": "gulp build",
+    "build:production": "gulp build --production",
+    "build:scss": "gulp buildScss",
+    "build:scss:production": "gulp buildScss --production",
+    "start": "gulp",
+    "prettify:scss": "prettier --write scss/**/*.scss"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.24.6",
+    "foundation-sites": "^6.5.0-rc.2",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "prettier": "^1.14.2",
+    "yargs": "^12.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
 }
