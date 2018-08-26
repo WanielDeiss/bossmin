@@ -1,3 +1,7 @@
+/*!
+ * Bossmin v2
+ */
+
 // Dependencies
 @import 'foundation';
 
@@ -6,6 +10,9 @@
 
 // Layouts
 @import './layouts/base-layout';
+
+// Components
+@import './components/widget';
 
 
 // Foundation
@@ -31,7 +38,7 @@
 
 // Basic components
 // @include foundation-badge;
-// @include foundation-breadcrumbs;
+@include foundation-breadcrumbs;
 // @include foundation-callout;
 // @include foundation-card;
 // @include foundation-dropdown;
@@ -69,3 +76,4 @@
 
 // Bossmin
 @include bossmin-base-layout;
+@include bossmin-widget;

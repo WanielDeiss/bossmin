@@ -1,7 +1,13 @@
 $base-layout-padding: $global-padding !default;
 
+$base-layout-breadcrumb: $white !default;
+
 $base-layout-topbar-height: 3rem !default;
 
+$base-layout-logo-color: $white !default;
+$base-layout-logo-font-weight: bold !default;
+$base-layout-logo-img-height: $global-padding !default;
+$base-layout-logo-img-margin-top: $global-padding !default;
 
 @mixin bossmin-base-layout {
   .bossmin { 
@@ -22,15 +28,29 @@ $base-layout-topbar-height: 3rem !default;
         height: $base-layout-topbar-height;
         padding: 0 ($base-layout-topbar-height / 3);
         overflow: hidden;
+        color: $base-layout-logo-color;
+        font-weight: $base-layout-logo-font-weight;
+
+        img {
+           height: $base-layout-logo-img-height;
+           margin-top: $base-layout-logo-img-margin-top;
+        }
       }
     }
 
     .bs-container {
-      flex: 1 1 0;
+      flex: 1 1 0; 
 
       >.bs-topbar {
         background: map-safe-get($layout-palette, gray-two);
         height: $base-layout-topbar-height;
+      }
+
+      >.bs-breadcrumb {
+        background: $base-layout-breadcrumb;
+        padding: 0.5rem;
+
+        .breadcrumbs { margin: 0 }
       }
 
       >.bs-content {

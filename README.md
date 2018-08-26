@@ -1,9 +1,8 @@
 # [Bossmin](http://wanieldeiss.github.io/bossmin/)
 ## IN PROGRESS...
 
-Bossmin is an easy to use Admin-Theme for Bootstrap 3
+Bossmin is an modular Admin-Theme based on Foundation 6
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Demo
 
@@ -13,16 +12,10 @@ Bossmin is an easy to use Admin-Theme for Bootstrap 3
 
 Licensed under [MIT](https://github.com/WebJedi-DE/bossmin/blob/master/LICENSE). Totally free for private or commercial projects.
 
-## ToDo's
-
-- [Write a Documentation](#documentation)
-
 ## Creator
 
 **Daniel Weiß**
 
-- [WebJedi Homepage](http://webjedi.de)
-- [Stackoverflow](https://stackoverflow.com/users/4165935/daniel-wei%C3%9F)
-- [Facebook](https://www.facebook.com/WebJedi.de)
-- [GitHub](https://github.com/WebJedi-DE)
-- [Xing](https://www.xing.com/profile/Daniel_Weiss48)
+- [Homepage](https://sircode.xyz)
+- [E-Mail](mailto:wanieldeiss@gmail.com)
+- [GitHub](https://github.com/WanielDeiss)

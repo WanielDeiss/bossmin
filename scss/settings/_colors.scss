@@ -1,7 +1,27 @@
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+
 $layout-palette: (
   gray-one: #646464,
   gray-two: #707070,
   gray-three: #d4d0d0,
   gray-four: #efefef,
   gray-five: #ffffff,
+);
+
+$bossmin-palette: (
+  primary: #5eb5b5,
+  secondary: #b5dddd,
+);
+
+$foundation-palette: (
+  primary: #1779ba,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+  bossmin: map-safe-get($bossmin-palette, primary), 
 );
